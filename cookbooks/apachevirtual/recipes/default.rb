@@ -8,7 +8,7 @@
 cookbookfile "./Dockerfile" do
   source "Dockerfile"
   action :create
-done
+end
 node["apache"]["sites"].each do |site_name, site_data|
   document_root = "#{site_name}"
  
