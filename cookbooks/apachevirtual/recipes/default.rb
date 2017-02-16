@@ -7,6 +7,7 @@
 # All rights reserved - Do Not Redistribute
 directory "/apachevirtual/sites" do
  mode "0755"
+ recursive true
 end
 cookbook_file "/apachevirtual/Dockerfile" do
   source "Dockerfile"
