@@ -22,12 +22,12 @@ node["apache"]["sites"].each do |site_name, site_data|
    variables(:document_root => document_root,:port => site_data["port"])
   end
  
-  directory "/apachevirtual/#{document_root}" do
+  directory "/apachevirtual/sitedoc/#{document_root}" do
    mode "0755"
    recursive true
   end
  
-  template "/apachevirtual/#{document_root}/index.html" do
+  template "/apachevirtual/sitedoc/#{document_root}/index.html" do
    source "index.html.erb"
    mode "0644"
    variables(:site_name => site_name, :port => site_data["port"])
