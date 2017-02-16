@@ -5,7 +5,7 @@
 # Copyright 2017, YOUR_COMPANY_NAME
 #
 # All rights reserved - Do Not Redistribute
-cookbookfile "./Dockerfile" do
+cookbook_file "./Dockerfile" do
   source "Dockerfile"
   action :create
 end
